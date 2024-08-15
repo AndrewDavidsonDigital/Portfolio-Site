@@ -137,7 +137,19 @@ export default {
           maxHeight: '100vh',
           aspectRatio: '16/9',
         },
-      })
+      });
+
+      // resolve to : `grid [grid-template-areas:_"stack"] *:[grid-area:_stack]`
+      const stackableGridArea = {
+        '.grid-area-stack' : {
+          display: 'grid',
+          gridTemplateAreas: '"stack"',
+          '>*' : {
+            'grid-area': 'stack',
+          }          
+        }
+      }
+      addUtilities(stackableGridArea);
     }),
   ],
 
