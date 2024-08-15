@@ -2,12 +2,14 @@
 <script setup lang="ts">
   import { RouterView } from 'vue-router'
   import Navigation from './components/navigation.vue';
+  import Footer from '@views/Footer.vue';
 </script>
 
 <template>
   <main class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
     <Navigation />
-    <RouterView class="w-full h-full flex flex-col justify-center items-center" />
+    <RouterView class="w-full flex flex-col justify-center items-center" />
+    <Footer />
   </main>
 </template>
 
