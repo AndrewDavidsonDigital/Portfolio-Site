@@ -11,13 +11,6 @@ html{
     font-size: clamp(1vh,1vw,1vw);
 }
 
-ruby, rt, rp {
-    @apply font-normal;
-}
-ruby:not([lang]) {
-    @apply font-semibold;
-}
-
 h1 {
     @apply text-2xl;
 }
@@ -34,6 +27,7 @@ button:disabled{
     @apply hover:text-white;
 }
 
-::selection{
+/* Should text be visually selectable? */
+/* ::selection{
     @apply text-inherit;
-}
+} */

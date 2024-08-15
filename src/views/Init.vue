@@ -12,8 +12,8 @@
   let layers = ref<ILayer[]>([{ state: "in" }, { state: "off"}])
   let activeLayer = ref(0)
   const interval = 6000;
-  // duration            1000   |  4000  | 1000 
-  // timings             1000   |  5000  | 6000
+  // duration            1000   |  3000  | 1000 
+  // timings             1000   |  4000  | 5000
   // flow:    off -> in   -> static ->  out  -> off
 
   // iterate and create timers per layer
@@ -29,10 +29,10 @@
     }, ((interval * i) + 1000));
     setTimeout(() => {
       val.state = "out";
-    }, ((interval * i) + 5000));
+    }, ((interval * i) + 4000));
     setTimeout(() => {
       val.state = "off";
-    }, ((interval * i) + 6000));
+    }, ((interval * i) + 5000));
   });
 
   // scene transition timer

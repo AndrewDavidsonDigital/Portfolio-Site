@@ -1,10 +1,24 @@
 
 <script setup lang="ts">
   import { RouterView } from 'vue-router'
+  import Navigation from './components/navigation.vue';
 </script>
 
 <template>
-  <main class="w-screen h-screen overflow-hidden bg-black hidden sm:block">
-    <RouterView class="w-full h-full flex flex-col justify-center items-center *:screen-1920p" />
+  <main class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
+    <Navigation />
+    <RouterView class="w-full h-full flex flex-col justify-center items-center" />
   </main>
 </template>
+
+
+<style>
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-orange-400;
+    @apply rounded-lg;
+  }
+  .scrollbar::-webkit-scrollbar {
+    @apply bg-slate-700;
+    @apply w-[0.5em];
+  }
+</style>
