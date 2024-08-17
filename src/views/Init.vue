@@ -43,7 +43,7 @@
 </script>
 
 <template>
-  <section class="bg-black text-white">
+  <section class="bg-black text-white absolute w-screen h-screen">
     <article 
       v-if="activeLayer === 0"
       :class="[
