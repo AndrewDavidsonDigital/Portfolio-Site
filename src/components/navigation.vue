@@ -1,9 +1,15 @@
 <script setup lang="ts">
+  import router from '../router';
 
 </script>
 
 <template>
-  <section class="w-full h-10 bg-slate-700 glass-sm sticky flex justify-between px-4">
+  <section 
+    :class="[
+      {'opacity-0 pointer-events-none' : router.currentRoute.value.name === 'init'},
+      'w-full h-10 bg-slate-700 glass-sm sticky flex justify-between px-4 transition-opacity duration-300 top-0',
+    ]"
+  >
     <div class="flex">
       <RouterLink to="/landing" class="hover:text-orange-400 self-center">=</RouterLink>
     </div>

@@ -1,6 +1,6 @@
 
 <script setup lang="ts">
-import VisualHighlight from '../components/visualHighlight.vue';
+import VisualHighlight from '../components/VisualHighlight.vue';
 
 
 </script>
