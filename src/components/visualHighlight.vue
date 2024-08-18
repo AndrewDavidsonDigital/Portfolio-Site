@@ -2,15 +2,13 @@
  import Tag from '@components/Tag.vue';
 
   type Colours = 'red' | 'blue';
-  type Media = 'video' | 'image';
+  type Media = { src: string, type: 'video' | 'image' } | { src: string[], type: 'imageCollection' } 
+
   interface Props {
     title: string,
     subTitle?: string,
     copy: string,
-    media: {
-      src: string,
-      type: Media,
-    },
+    media: Media,
     tags: string[],
     colour: Colours,
     leftAligned?: boolean,
@@ -26,15 +24,21 @@
   <section class="grid-area-stack w-full min-h-[80vh]">
     <video 
       v-if="props.media.type === 'video'"
-      class="w-full object-center"
+      class="w-full object-center animate-fadeIn duration-150"
       autoplay
       muted
       loop
       :src="props.media.src"
     >
     </video>
+    <img v-if="props.media.type === 'image'" :src="props.media.src" class="w-full object-center animate-fadeIn duration-150"/>
+    <div v-if="props.media.type === 'imageCollection'" class="grid-area-stack ">
+      <template v-for="src in props.media.src">
+        <img :src="src" class="object-contain animate-fadeIn duration-150 self-center w-full"/>
+      </template>
+    </div>
     <div :class="[
-      'bg-gradient-to-r to-65%',
+      'bg-gradient-to-r to-65% z-10',
       {'!bg-gradient-to-l' : props.leftAligned },
       {'from-red-400/20 to-red-400' : props.colour === 'red'},
       {'from-blue-400/20 to-blue-400' : props.colour === 'blue'},

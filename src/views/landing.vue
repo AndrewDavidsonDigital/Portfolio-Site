@@ -12,8 +12,8 @@
       subTitle="Past Work"
       copy=""
       :media="{
-        src: '', 
-        type: 'image',
+        src: ['/image/delivery_1.jpg', '/image/delivery_2.jpg'], 
+        type: 'imageCollection',
       }"
       :tags="[
         'React', 
