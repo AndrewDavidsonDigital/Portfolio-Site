@@ -7,7 +7,10 @@
   <section 
     :class="[
       {'opacity-0 pointer-events-none' : router.currentRoute.value.name === 'init'},
-      'w-full h-10 bg-slate-700 glass-sm sticky flex justify-between px-4 transition-opacity duration-300 top-0',
+      'w-full h-10 px-4 transition-opacity duration-300',
+      'bg-slate-700 glass-sm ',
+      'top-0 sticky flex justify-between',
+      'z-menu',
     ]"
   >
     <div class="flex">
