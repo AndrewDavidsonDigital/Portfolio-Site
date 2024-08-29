@@ -1,5 +1,6 @@
 <script setup lang="ts">
- import Tag from '@components/Tag.vue';
+  import Tag from '@components/Tag.vue';
+  import ItemCollection from '@components/ItemCollection.vue';
 
   type Colours = 'red' | 'blue';
   type Media = { src: string, type: 'video' | 'image' } | { src: string[], type: 'imageCollection' } 
@@ -21,7 +22,7 @@
 </script>
 
 <template>
-  <section class="grid-area-stack w-full min-h-[80vh]">
+  <section class="grid-area-stack w-full max-h-[85vh] aspect-16/9 overflow-hidden">
     <video 
       v-if="props.media.type === 'video'"
       class="w-full object-center animate-fadeIn duration-150"
@@ -32,11 +33,9 @@
     >
     </video>
     <img v-if="props.media.type === 'image'" :src="props.media.src" class="w-full object-center animate-fadeIn duration-150"/>
-    <div v-if="props.media.type === 'imageCollection'" class="grid-area-stack ">
-      <template v-for="src in props.media.src">
-        <img :src="src" class="object-contain animate-fadeIn duration-150 self-center w-full"/>
-      </template>
-    </div>
+    <template v-if="props.media.type === 'imageCollection'" class="grid-area-stack ">
+      <ItemCollection :media="props.media"/>
+    </template>
     <div :class="[
       'bg-gradient-to-r to-65% z-10',
       {'!bg-gradient-to-l' : props.leftAligned },
@@ -45,6 +44,7 @@
       ]"></div>
     <div :class="[ 
       'px-20 py-5',
+      'max-w-[50rem]',
       'self-center',
       'z-10',
       {'place-self-end' : !(props.leftAligned) },
@@ -54,7 +54,7 @@
       <p>{{props.copy}}</p>
       <section 
         v-if="props.tags.length > 0" 
-        class="flex gap-2"
+        class="flex gap-2 pt-2"
       >
         <template v-for="tag in props.tags">
           <Tag :copy="tag" />
