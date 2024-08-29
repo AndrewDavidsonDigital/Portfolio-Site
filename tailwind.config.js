@@ -37,29 +37,9 @@ export default {
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         fadeOut: 'fadeOut 1s ease-in-out',
-        effectWarning: 'effectWarning 5s ease-in-out forwards infinite',
-        effectGoodBad: 'effectGoodBad 5s linear forwards infinite',
-        ripple: 'ripple 0.5s linear',
+        fadeInOut: 'fadeInOut 4s ease-in-out forwards infinite',
       },
       keyframes: {
-        ripple: {
-          '0%': { 
-            opacity: 0,
-          },
-          '20%': { 
-            opacity: 1,
-          },
-          '60%': { 
-            opacity: 0.8,
-          },
-          '80%': { 
-            opacity: 0.5,
-          },
-          '100%': { 
-            opacity: 0,
-            scale: '150%',
-          },
-        },
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
@@ -68,40 +48,24 @@ export default {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 },
         },
-        effectWarning: {
-          '0%' : {
-            boxShadow: 'inset 0 0 20px 15px rgb(255 0 0)',
+        fadeInOut: {
+          '0%': { 
+            opacity: 0,
+            order: 1,
           },
-          '30%' : {
-            boxShadow: 'inset 0 0 20px 0px rgb(255 0 0)',
+          '30%': { 
+            opacity: 1,
+            order: 1,
           },
-          '45%' : {
-            boxShadow: 'inset 0 0 20px 25px rgb(255 0 0)',
+          '70%': { 
+            opacity: 1,
+            order: 0,
           },
-          '85%' : {
-            boxShadow: 'inset 0 0 20px 0px rgb(255 0 0)',
-          },
-          '100%' : {
-            boxShadow: 'inset 0 0 20px 15px rgb(255 0 0)',
+          '100%': { 
+            opacity: 0,
+            order: 0,
           },
         },
-        effectGoodBad: {
-          '0%' : {
-            opacity: 0.5,
-          },
-          '30%' : {
-            opacity: 1,
-          },
-          '45%' : {
-            opacity: 0.5,
-          },
-          '85%' : {
-            opacity: 0.8,
-          },
-          '100%' : {
-            opacity: 0.5,
-          },
-        }
       }
     },
   },
@@ -117,6 +81,18 @@ export default {
         },
         {
           values: theme("transitionDelay"),
+        }
+      );
+      matchUtilities(
+        {
+          "animation-duration": (value) => {
+            return {
+              "animation-duration": value,
+            };
+          },
+        },
+        {
+          values: theme("transitionDuration"),
         }
       );
     }),
