@@ -31,3 +31,5 @@ coverage
 
 *.tsbuildinfo
 .yarnrc.yml
+public/image/delivery_1.svg
+public/image/delivery_2.svg
