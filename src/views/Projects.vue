@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
   import Tabset, { ITab } from '@components/Tabset.vue';
-  import PRConsidreations from '@content/PR-considreations.vue';
+  import PRConsiderations from '@content/PR-considerations.vue';
   import PRIllusionDev from '@content/PR-illusion-dev.vue';
   import PRIllusionGamer from '@content/PR-illusion-gamer.vue';
   import { ref } from 'vue';
@@ -36,7 +36,7 @@
         <TransitionGroup>
           <PRIllusionDev v-if="activeKey === tabs[0].key"/>
           <PRIllusionGamer v-if="activeKey === tabs[1].key"/>
-          <PRConsidreations v-if="activeKey === tabs[2].key"/>
+          <PRConsiderations v-if="activeKey === tabs[2].key"/>
         </TransitionGroup>
       </div>
     </Tabset>

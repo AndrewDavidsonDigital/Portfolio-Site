@@ -11,6 +11,7 @@
       <a 
         href="https://github.com/AndrewDavidsonDigital" 
         class="transition-colors duration-300 hover:text-orange-300 hover:underline underline-offset-4"
+        target="_blank"
       >github.com/AndrewDavidsonDigital</a>
     </div>
   </footer>
