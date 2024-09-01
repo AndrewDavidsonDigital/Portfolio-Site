@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import {
     VisualHighlight,
-    Copy,
   } from '@components/index';
 
 </script>

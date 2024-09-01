@@ -39,6 +39,7 @@ import router from '../router';
   <section v-if="props.tabs.length > 1" class="flex gap-4 py-2 sticky top-[2.5rem] w-screen justify-center bg-black z-menu">
     <template v-for="(tab, index) in props.tabs" :key="`tabIndex_${index}`">
       <button 
+        :key="`button_${index}`"
         :class="[
           'transition-colors duration-300',
           { 'text-orange-400 pointer-events-none' : currentlyActive === tab.key},
