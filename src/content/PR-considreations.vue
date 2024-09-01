@@ -9,6 +9,7 @@
 <template>
   <section class="flex flex-col gap-y-2">
     <VisualHighlight
+      isHero
       title="Problem Solving"
       subTitle="Personal Project"
       copy="Over the past decade of work there are a myriad of technical / functional / logical problems that are discovered. This a collection of some of the more interesting / abstract of these problems." 

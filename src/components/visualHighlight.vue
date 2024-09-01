@@ -17,7 +17,8 @@
     hashLink?: {
       title: string;
       link: RouteLocationRaw;
-    }
+    },
+    isHero?: boolean
   }
 
   const props = withDefaults(defineProps<Props>(), {
@@ -27,7 +28,11 @@
 </script>
 
 <template>
-  <article class="grid-area-stack max-h-[85vh] md:aspect-16/9 overflow-hidden w-screen">
+  <article 
+    :class="[
+      'grid-area-stack md:aspect-16/9 overflow-hidden w-screen',
+      props.isHero ? 'max-h-[65dvh]' : 'max-h-[85dvh]'
+    ]">
     <video 
       v-if="props.media.type === 'video'"
       class="w-full object-center animate-fadeIn duration-150"
@@ -51,7 +56,7 @@
     <div :class="[ 
       'px-4 md:px-10 lg:px-20 py-5',
       'max-w-[50rem]',
-      'self-center',
+      'my-auto 2xl:mt-[10%]',
       'z-10',
       {'place-self-end text-end' : !(props.leftAligned) },
       {'[&>*]:!text-slate-800' : props.colour === 'teal'},

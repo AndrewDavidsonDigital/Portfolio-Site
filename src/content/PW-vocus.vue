@@ -9,6 +9,7 @@
 <template>
   <section class="flex flex-col gap-y-2 mb-4">
     <VisualHighlight
+      isHero
       title="Marketing Websites - Vocus"
       subTitle="Past Work"
       copy="Development and rollout of Atomic Design, from CMS authoring down to React rendering and deployment." 

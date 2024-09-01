@@ -9,6 +9,7 @@
 <template>
   <section class="flex flex-col gap-y-2 mb-4">
     <VisualHighlight
+      isHero
       title="Internal Warehouse & Order Management System"
       subTitle="Past Work"
       copy="Developing, Supporting and Leading the development team on rolling out order-management flow and document integration bi-directional into Xero."

@@ -9,6 +9,7 @@
 <template>
   <section class="flex flex-col gap-y-2 mb-4">
     <VisualHighlight
+      isHero
       title="Marketing Websites - Holden"
       subTitle="Past Work"
       copy="Development and support of Back End APIs for supporting both the Front End and ensuring CI/CD flows correctly."
