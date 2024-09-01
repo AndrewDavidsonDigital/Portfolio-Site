@@ -35,3 +35,5 @@ public/image/delivery_1.svg
 public/image/delivery_2.svg
 public/image/marketing_2_0.png
 public/image/marketing_2_1.png
+vite.config.d.ts
+vite.config.js
