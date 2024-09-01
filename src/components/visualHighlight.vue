@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <section class="grid-area-stack w-full max-h-[85vh] aspect-16/9 overflow-hidden">
+  <section class="grid-area-stack w-full max-h-[85vh] md:aspect-16/9 overflow-hidden w-screen">
     <video 
       v-if="props.media.type === 'video'"
       class="w-full object-center animate-fadeIn duration-150"
@@ -43,18 +43,21 @@
       {'from-blue-400/20 to-blue-400' : props.colour === 'blue'},
       ]"></div>
     <div :class="[ 
-      'px-20 py-5',
+      'px-4 md:px-10 lg:px-20 py-5',
       'max-w-[50rem]',
       'self-center',
       'z-10',
-      {'place-self-end' : !(props.leftAligned) },
+      {'place-self-end text-end' : !(props.leftAligned) },
     ]">
       <h2>{{ props.title }}</h2>
       <h3 v-if="props.subTitle">{{ props.subTitle}}</h3>
       <p>{{props.copy}}</p>
       <section 
         v-if="props.tags.length > 0" 
-        class="flex gap-2 pt-2"
+        :class="[
+          'flex flex-wrap gap-2 pt-2',
+          {'justify-end' : !(props.leftAligned) },
+        ]"
       >
         <template v-for="tag in props.tags">
           <Tag :copy="tag" />
