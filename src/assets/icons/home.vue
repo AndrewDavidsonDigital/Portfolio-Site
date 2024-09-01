@@ -9,6 +9,8 @@
   const el = ref<SVGElement>();
   const bouncing = ref<boolean>(false);
 
+  const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+
   function reScale(){
     if (bouncing.value === true) {
       // console.log('bounced');
@@ -19,7 +21,16 @@
       () => {
         // console.log('rescale\t', Date.now());
         if (el.value){
-          const fontSize = (el.value.computedStyleMap().get('font-size')) as undefined | ICustomFontCSSStyleValue; // value seems to be always in px'
+          let fontSize:undefined | ICustomFontCSSStyleValue = undefined;
+          if (isFirefox){
+            const fontELement = `${window.getComputedStyle(el.value).fontSize}`;
+            fontSize  = {
+              value: Number(fontELement.slice(0, fontELement.length - 2)), // assume we are always in px here hence drop last 2 chars
+              unit: 'px',
+            }
+          }else{
+            fontSize = (el.value.computedStyleMap().get('font-size')) as undefined | ICustomFontCSSStyleValue; // value seems to be always in px'
+          }
           if (fontSize){
             const scaleSize = (fontSize.value / 16).toPrecision(4);
             el.value.style.setProperty('--scale-value', scaleSize)
