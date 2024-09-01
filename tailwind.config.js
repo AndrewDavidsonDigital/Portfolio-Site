@@ -17,6 +17,7 @@ export default {
       'xl': '1280px',
       '2xl': '1600px',
       '3xl': '1920px',
+      '4xl': '2500px',
     },
     extend: {
       backgroundSize: {
@@ -35,6 +36,7 @@ export default {
         '1920p': '1920px',
         'content': '1200px',
         'lg-content': '1600px',
+        'xl-content': '60rem',
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',

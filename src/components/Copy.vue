@@ -13,7 +13,7 @@
 <template>
   <section 
     :class="[
-      'py-2 w-full max-w-content 3xl:max-w-lg-content mx-auto px-4 md:px-10 text-slate-300',
+      'py-2 w-full max-w-content 3xl:max-w-lg-content 4xl:max-w-xl-content mx-auto px-4 md:px-10 text-slate-300',
       { 'firstParaChar' : !(props.disableFirstChar) }
     ]"
   >
