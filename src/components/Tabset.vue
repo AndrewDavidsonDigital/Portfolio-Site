@@ -30,6 +30,8 @@ import router from '../router';
       if (isValidHash){
         setActive(routeHash);
       }
+    }else{
+      document.getElementById('scrollRoot')?.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
 
@@ -41,7 +43,7 @@ import router from '../router';
       <button
         :class="[
           'transition-colors duration-300',
-          { 'text-orange-400 pointer-events-none' : currentlyActive === tab.key},
+          { 'text-orange-400 underline underline-offset-4 pointer-events-none' : currentlyActive === tab.key},
           { '' : index === -1} // BS check here since TSC complains about index not being used but is used in key on own template
         ]"
         @click="setActive(tab.key)"

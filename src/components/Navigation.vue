@@ -21,8 +21,8 @@
       <NavigationLink to="/landing"><HomeIcon /></NavigationLink>
     </div>
     <div class="flex justify-end gap-x-6">
-      <NavigationLink to="/projects">Personal Projects</NavigationLink>
       <NavigationLink to="/pastworks">Past Work</NavigationLink>
+      <NavigationLink to="/projects">Personal Projects</NavigationLink>
     </div>
   </section>
 </template>
