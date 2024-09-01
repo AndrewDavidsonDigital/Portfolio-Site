@@ -28,7 +28,11 @@
     />
     <TimeToRead/>
     <Copy
-      paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      :paragraphs="[
+        'Lets just get this out in the open straight away, under NO circumstances would I recommend building a game engine in JavaScript let alone a framework on top of it. This is purely an instance of curiosity to see to what extent replication could be possible within modern(circa 2024) JavaScript.',
+        'Now that thats out of the way, where do we even begin here. I\'ll be breaking this section in two to describe different aspect / focuses. For now lets go into some more gamer specific related aspects.',
+      ]"
     />
+    <Copy paragraph="TBD." />
   </section>
 </template>
