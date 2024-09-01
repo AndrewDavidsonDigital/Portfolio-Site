@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <section class="grid-area-stack w-full max-h-[85vh] md:aspect-16/9 overflow-hidden w-screen">
+  <article class="grid-area-stack max-h-[85vh] md:aspect-16/9 overflow-hidden w-screen">
     <video 
       v-if="props.media.type === 'video'"
       class="w-full object-center animate-fadeIn duration-150"
@@ -64,5 +64,5 @@
         </template>
       </section>
     </div>
-  </section>
+  </article>
 </template>
