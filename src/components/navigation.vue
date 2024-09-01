@@ -1,5 +1,9 @@
 <script setup lang="ts">
   import router from '../router';
+  import NavigationLink from '@components/NavigationLink.vue';
+  import {
+    HomeIcon,
+  } from '@assets/icons';
 
 </script>
 
@@ -14,11 +18,11 @@
     ]"
   >
     <div class="flex">
-      <RouterLink to="/landing" class="hover:text-orange-400 self-center">=</RouterLink>
+      <NavigationLink to="/landing"><HomeIcon /></NavigationLink>
     </div>
     <div class="flex justify-end gap-x-6">
-      <RouterLink to="/projects" class="hover:text-orange-400 self-center">Personal Projects</RouterLink>
-      <RouterLink to="/pastworks" class="hover:text-orange-400 self-center">Past Work</RouterLink>
+      <NavigationLink to="/projects">Personal Projects</NavigationLink>
+      <NavigationLink to="/pastworks">Past Work</NavigationLink>
     </div>
   </section>
 </template>
