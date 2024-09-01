@@ -9,6 +9,7 @@
       "@views/*": ["./src/views/*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
+      "@content/*": ["./src/content/*"],
     },
 
     /* Bundler mode */
