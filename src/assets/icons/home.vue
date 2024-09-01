@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { onMounted, onUnmounted, ref } from 'vue';
+  import { isFirefox } from '@lib/browsers';
 
   interface ICustomFontCSSStyleValue {
     value: number;
@@ -8,8 +9,6 @@
 
   const el = ref<SVGElement>();
   const bouncing = ref<boolean>(false);
-
-  const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
 
   function reScale(){
     if (bouncing.value === true) {
