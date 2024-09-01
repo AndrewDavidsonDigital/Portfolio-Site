@@ -30,16 +30,16 @@
     img {
       animation-delay: var(--animation-delay);
     }
-    :nth-child(0){
+    :nth-child(1){
       --animation-delay: calc(0 * v-bind(DELAY_DURATION));
     }
-    :nth-child(1){
+    :nth-child(2){
       --animation-delay: calc(1 * v-bind(DELAY_DURATION));
     }
-    :nth-child(2){
+    :nth-child(3){
       --animation-delay: calc(2 * v-bind(DELAY_DURATION));
     }
-    :nth-child(3){
+    :nth-child(4){
       --animation-delay: calc(3 * v-bind(DELAY_DURATION));
     }
   }

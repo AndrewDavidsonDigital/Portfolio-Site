@@ -2,7 +2,7 @@
 <script setup lang="ts">
   import { RouterView } from 'vue-router'
   import { Navigation } from '@components/index';
-  import Footer from '@views/Footer.vue';
+  import FooterElement  from '@views/FooterElement.vue';
   import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 </script>
@@ -12,7 +12,7 @@
   <main id="scrollRoot" class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
     <Navigation />
     <RouterView class="w-full flex flex-col justify-center items-center" />
-    <Footer />
+    <FooterElement />
   </main>
 </template>
 
