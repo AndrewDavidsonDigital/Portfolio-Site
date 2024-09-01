@@ -2,7 +2,11 @@
   import { onMounted, ref } from 'vue';
 
   const timeElement = ref<HTMLParagraphElement>();
-  const WORDS_PER_MINUTE_ADULT = 265;
+  /* assume that your writing something interesting enough that people will 
+   * spend ~20% of their time thinking about what you wrote 
+   */
+  const PONDERING_TIME = 60; 
+  const WORDS_PER_MINUTE_ADULT = 300 - PONDERING_TIME;
 
   onMounted(() => {
     if (timeElement.value){
