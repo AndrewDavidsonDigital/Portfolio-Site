@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <section class="flex flex-col gap-y-2">
+  <section class="flex flex-col gap-y-2 mb-4">
     <VisualHighlight
       title="Marketing Websites - Holden"
       subTitle="Past Work"
@@ -25,7 +25,7 @@
         'REST',
         'SOAP',
       ]"
-      colour="blue"
+      colour="red"
       leftAligned
     />
     <Copy

@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <section class="flex flex-col gap-y-2">
+  <section class="flex flex-col gap-y-2 mb-4">
     <VisualHighlight
       title="Internal Warehouse & Order Management System"
       subTitle="Past Work"
@@ -23,7 +23,7 @@
         'Typescript',
         'CRM',
       ]"
-      colour="blue"
+      colour="teal"
       leftAligned
     />
     <Copy paragraph='This PAAS looked to solve the issue of requiring a distributed set of different services to facilitate the management of both inventory, client-orders, and payment-flows. Rolling our own custom front-end in vue, initially vue-2 before migrating to vue-3, allowed for a clean SPA interface over the PHP Laravel backend.'/>
