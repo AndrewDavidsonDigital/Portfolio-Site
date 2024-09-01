@@ -24,7 +24,7 @@
       colour="blue"
       leftAligned
       :hashLink="{
-        title: 'More details about juggling features vs requirements vs user experiences',
+        title: 'More details about the complexities of maintaining a singular service that would traditionally be 3 distinct services',
         link: {
           path: '/pastworks',
           hash: '#ack',
