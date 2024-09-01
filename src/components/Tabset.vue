@@ -36,7 +36,7 @@ import router from '../router';
 </script>
 
 <template>
-  <section class="flex gap-4 py-2 sticky top-[2.5rem] w-screen justify-center bg-black z-menu">
+  <section v-if="props.tabs.length > 1" class="flex gap-4 py-2 sticky top-[2.5rem] w-screen justify-center bg-black z-menu">
     <template v-for="(tab, index) in props.tabs" :key="`tabIndex_${index}`">
       <button 
         :class="[
