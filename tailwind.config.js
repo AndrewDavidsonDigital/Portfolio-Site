@@ -32,6 +32,9 @@ export default {
       aspectRatio: {
         '16/9' : '16/9'
       },
+      height: {
+        'screen': '100dvh', // overwrite from vh to dvh
+      },
       maxWidth: {
         '1920p': '1920px',
         'content': '1200px',

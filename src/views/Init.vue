@@ -43,7 +43,7 @@
 </script>
 
 <template>
-  <section class="bg-black text-white absolute w-screen h-screen">
+  <section class="bg-black text-white absolute w-screen h-screen px-4">
     <article 
       v-if="activeLayer === 0"
       :class="[
@@ -55,7 +55,7 @@
         { 'opacity-0'      : layers[0].state === 'off' },
         ]"
     >
-      <div class="max-w-[1000px] *:text-lg *:text-gray-500">
+      <div class="max-w-[1000px] text-center *:text-lg *:text-gray-500">
         <p>This product is brought to you by Indecies out of Bounds & Segmentation Faults</p>
       </div>
     </article>

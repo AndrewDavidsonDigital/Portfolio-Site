@@ -39,6 +39,7 @@
       autoplay
       muted
       loop
+      playsinline
       :src="props.media.src"
     >
     </video>
