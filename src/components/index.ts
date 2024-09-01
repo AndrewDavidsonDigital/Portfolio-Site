@@ -4,6 +4,7 @@ import Navigation from './Navigation.vue';
 import NavigationLink from './NavigationLink.vue';
 import Tabset from './Tabset.vue';
 import Tag from './Tag.vue';
+import TimeToRead from './TimeToRead.vue';
 import VisualHighlight from './VisualHighlight.vue';
 
 export {
@@ -13,5 +14,6 @@ export {
   NavigationLink,
   Tabset,
   Tag,
+  TimeToRead,
   VisualHighlight,
 }

@@ -2,6 +2,7 @@
   import {
     VisualHighlight,
     Copy,
+    TimeToRead,
   } from '@components/index';
 
 </script>
@@ -28,6 +29,7 @@
       colour="blue"
       leftAligned
     />
+    <TimeToRead/>
     <Copy :paragraphs="[
       'Marketing websites are pretty much a fundamental of the current landscape. Building and supporting these within the various confines of the client your working for is one of the more complicated aspects these days. ',
       'For Vocus this meant re-working an existing code base to support various underdeveloped features; standardized content authoring within their CMS, creating system/process for multi-site support from within this singular CMS instance.',

@@ -2,8 +2,8 @@
   import {
     VisualHighlight,
     Copy,
+    TimeToRead,
   } from '@components/index';
-
 </script>
 
 <template>
@@ -27,6 +27,7 @@
       colour="teal"
       leftAligned
     />
+    <TimeToRead/>
     <Copy paragraph='This PAAS looked to solve the issue of requiring a distributed set of different services to facilitate the management of both inventory, client-orders, and payment-flows. Rolling our own custom front-end in vue, initially vue-2 before migrating to vue-3, allowed for a clean SPA interface over the PHP Laravel backend.'/>
     <Copy
       disableFirstChar
