@@ -50,7 +50,7 @@
         title: 'Read about some of the obscure issues that I encountered.',
         link: {
           path: '/projects',
-          hash: '#illusion',
+          hash: '#illusionEngineDev',
         }
       }"
     />
