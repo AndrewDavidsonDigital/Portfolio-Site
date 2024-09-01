@@ -23,6 +23,13 @@
       ]"
       colour="blue"
       leftAligned
+      :hashLink="{
+        title: 'More details about juggling features vs requirements vs user experiences',
+        link: {
+          path: '/pastworks',
+          hash: '#ack',
+        }
+      }"
     />
     <VisualHighlight 
       title="Visual Novel Game Engine"
@@ -39,6 +46,13 @@
         'Gaming',
       ]"
       colour="red"
+      :hashLink="{
+        title: 'Read about some of the obscure issues that I encountered.',
+        link: {
+          path: '/projects',
+          hash: '#illusion',
+        }
+      }"
     />
     <VisualHighlight 
       title="Marketing Websites - Holden"
@@ -59,6 +73,13 @@
       ]"
       colour="blue"
       leftAligned
+      :hashLink="{
+        title: 'How did I achieve ~70% reduction on CICD build time',
+        link: {
+          path: '/pastworks',
+          hash: '#holden',
+        }
+      }"
     />
     <VisualHighlight 
       title="Marketing Websites - Vocus"
@@ -77,6 +98,13 @@
         'GraphQL',
       ]"
       colour="red"
+      :hashLink="{
+        title: 'Read more on our solutions',
+        link: {
+          path: '/pastworks',
+          hash: '#vocus',
+        }
+      }"
     />
   </section>
 </template>

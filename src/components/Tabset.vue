@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import router from '../router';
 
   export interface ITab {
     key: string;
@@ -18,7 +19,19 @@ import { ref } from 'vue';
     currentlyActive.value = key;
     $emit('setActive', key);
     document.getElementById('scrollRoot')?.scrollTo({ top: 0, behavior: 'smooth' });
+    router.push({ path: router.currentRoute.value.path ,hash: `#${key}` });
   }
+
+  onMounted(() => {
+    let routeHash = router.currentRoute.value.hash;
+    if (routeHash){
+      routeHash = routeHash.slice(1);
+      const isValidHash = props.tabs.findIndex((el) => el.key === routeHash) !== -1;
+      if (isValidHash){
+        setActive(routeHash);
+      }
+    }
+  });
 
 </script>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import Tag from '@components/Tag.vue';
   import ItemCollection from '@components/ItemCollection.vue';
+  import { RouteLocationRaw } from 'vue-router';
 
   type Colours = 'red' | 'blue';
   type Media = { src: string, type: 'video' | 'image' } | { src: string[], type: 'imageCollection' } 
@@ -13,6 +14,10 @@
     tags: string[],
     colour: Colours,
     leftAligned?: boolean,
+    hashLink?: {
+      title: string;
+      link: RouteLocationRaw;
+    }
   }
 
   const props = withDefaults(defineProps<Props>(), {
@@ -62,6 +67,9 @@
         <template v-for="tag in props.tags">
           <Tag :copy="tag" />
         </template>
+      </section>
+      <section v-if="props.hashLink" class="pt-2">
+        <RouterLink :to="props.hashLink.link" class="italic text-slate-800 hover:text-inherit transition-colors duration-300">{{ props.hashLink.title }}</RouterLink> 
       </section>
     </div>
   </article>
