@@ -3,7 +3,7 @@
   import ItemCollection from '@components/ItemCollection.vue';
   import { RouteLocationRaw } from 'vue-router';
 
-  type Colours = 'red' | 'blue';
+  type Colours = 'red' | 'blue' | 'teal';
   type Media = { src: string, type: 'video' | 'image' } | { src: string[], type: 'imageCollection' } 
 
   interface Props {
@@ -46,6 +46,7 @@
       {'!bg-gradient-to-l' : props.leftAligned },
       {'from-red-400/20 to-red-400' : props.colour === 'red'},
       {'from-blue-400/20 to-blue-400' : props.colour === 'blue'},
+      {'from-teal-400/20 to-teal-400' : props.colour === 'teal'},
       ]"></div>
     <div :class="[ 
       'px-4 md:px-10 lg:px-20 py-5',
@@ -53,6 +54,7 @@
       'self-center',
       'z-10',
       {'place-self-end text-end' : !(props.leftAligned) },
+      {'[&>*]:!text-slate-800' : props.colour === 'teal'},
     ]">
       <h2>{{ props.title }}</h2>
       <h3 v-if="props.subTitle">{{ props.subTitle}}</h3>
