@@ -1,9 +1,9 @@
 
 <script setup lang="ts">
-  import VisualHighlight from '@components/VisualHighlight.vue';
   import Tabset, { ITab } from '@components/Tabset.vue';
   import PWAck from '@content/PW-ack.vue';
-  import PRIllusion from '@content/PR-illusion.vue';
+  import PWHolden from '@content/PW-holden.vue';
+  import PWVocus from '@content/PW-vocus.vue';
   import { ref } from 'vue';
 
   const tabs: ITab[] = [
@@ -12,8 +12,12 @@
       key: 'ack',
     },
     { 
-      title: 'Game Engine',
-      key: 'illusionEngine',
+      title: 'Vocus',
+      key: 'vocus',
+    },
+    { 
+      title: 'Holden',
+      key: 'holden',
     },
   ]
 
@@ -31,7 +35,8 @@
       <div class="grid-area-stack">
         <TransitionGroup>
           <PWAck v-if="activeKey === tabs[0].key"/>
-          <PRIllusion v-if="activeKey === tabs[1].key"/>
+          <PWVocus v-if="activeKey === tabs[1].key"/>
+          <PWHolden v-if="activeKey === tabs[2].key"/>
         </TransitionGroup>
       </div>
     </Tabset>

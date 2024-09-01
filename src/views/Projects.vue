@@ -1,8 +1,7 @@
 
 <script setup lang="ts">
-  import VisualHighlight from '@components/VisualHighlight.vue';
   import Tabset, { ITab } from '@components/Tabset.vue';
-  import PWAck from '@content/PW-ack.vue';
+import PRConsidreations from '@content/PR-considreations.vue';
   import PRIllusion from '@content/PR-illusion.vue';
   import { ref } from 'vue';
 
@@ -10,6 +9,10 @@
     { 
       title: 'Game Engine',
       key: 'illusionEngine',
+    },
+    { 
+      title: 'Problem Solving',
+      key: 'considerations',
     },
   ]
 
@@ -27,6 +30,7 @@
       <div class="grid-area-stack">
         <TransitionGroup>
           <PRIllusion v-if="activeKey === tabs[0].key"/>
+          <PRConsidreations v-if="activeKey === tabs[1].key"/>
         </TransitionGroup>
       </div>
     </Tabset>
