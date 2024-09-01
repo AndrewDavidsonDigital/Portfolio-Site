@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <main class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
+  <main id="scrollRoot" class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
     <Navigation />
     <RouterView class="w-full flex flex-col justify-center items-center" />
     <Footer />
