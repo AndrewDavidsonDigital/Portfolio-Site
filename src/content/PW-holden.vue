@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <section>
+  <section class="flex flex-col gap-y-2">
     <VisualHighlight
       title="Marketing Websites - Holden"
       subTitle="Past Work"
