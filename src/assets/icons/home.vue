@@ -11,13 +11,13 @@
 
   function reScale(){
     if (bouncing.value === true) {
-      console.log('bounced')
+      // console.log('bounced');
       return;
     };
 
     setTimeout(
       () => {
-        console.log('rescale\t', Date.now());
+        // console.log('rescale\t', Date.now());
         if (el.value){
           const fontSize = (el.value.computedStyleMap().get('font-size')) as undefined | ICustomFontCSSStyleValue; // value seems to be always in px'
           if (fontSize){
