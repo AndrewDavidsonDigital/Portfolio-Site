@@ -3,9 +3,12 @@
   import { RouterView } from 'vue-router'
   import { Navigation } from '@components/index';
   import Footer from '@views/Footer.vue';
+  import { SpeedInsights } from '@vercel/speed-insights/vue';
+
 </script>
 
 <template>
+  <SpeedInsights />
   <main id="scrollRoot" class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
     <Navigation />
     <RouterView class="w-full flex flex-col justify-center items-center" />
