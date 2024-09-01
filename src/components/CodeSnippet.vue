@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <section class="w-fit md:max-w-[60rem] mx-auto rounded-lg overflow-hidden [&>pre>code]:whitespace-pre-wrap">
+  <section class="w-screen px-2 md:w-fit md:max-w-[60rem] mx-auto rounded-lg overflow-hidden [&>pre>code]:whitespace-pre-wrap">
     <highlightjs autodetect :code="props.content" />
   </section>
 </template>
