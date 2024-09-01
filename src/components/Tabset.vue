@@ -23,7 +23,7 @@ import { ref } from 'vue';
 </script>
 
 <template>
-  <section class="flex gap-4 py-2 sticky top-[41px] w-screen justify-center bg-black z-menu">
+  <section class="flex gap-4 py-2 sticky top-[2.5rem] w-screen justify-center bg-black z-menu">
     <template v-for="(tab, index) in props.tabs" :key="`tabIndex_${index}`">
       <button 
         :class="[

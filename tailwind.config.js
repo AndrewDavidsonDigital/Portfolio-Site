@@ -33,6 +33,8 @@ export default {
       },
       maxWidth: {
         '1920p': '1920px',
+        'content': '1200px',
+        'lg-content': '1600px',
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
