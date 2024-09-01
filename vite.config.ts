@@ -20,13 +20,6 @@ export default defineConfig({
       // "&audio": path.resolve(__dirname, "./src/stores/audio"),      
     },
   },
-  test: {
-    name: 'Portfolio',
-    root: './',
-    environment: 'node',
-    include: ['**\/*.{test,spec,unit}.?(c|m)[jt]s?(x)'],
-    watch: false,
-  },
   plugins: [
     vue(),
     vercel(),
