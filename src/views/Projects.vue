@@ -23,6 +23,8 @@
 
   const activeKey = ref<string>(tabs[0].key);
 
+  const mountedTime = Date.now();
+
 
 </script>
 
@@ -34,9 +36,9 @@
     >
       <div class="grid-area-stack">
         <TransitionGroup>
-          <PRIllusionDev v-if="activeKey === tabs[0].key"/>
-          <PRIllusionGamer v-if="activeKey === tabs[1].key"/>
-          <PRConsiderations v-if="activeKey === tabs[2].key"/>
+          <PRIllusionDev v-show="activeKey === tabs[0].key" :key="`tab_${tabs[0].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[0].key}"/>
+          <PRIllusionGamer v-show="activeKey === tabs[1].key" :key="`tab_${tabs[1].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[1].key}"/>
+          <PRConsiderations v-show="activeKey === tabs[2].key" :key="`tab_${tabs[2].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[2].key}"/>
         </TransitionGroup>
       </div>
     </Tabset>
@@ -46,7 +48,7 @@
 <style scoped>
   .v-enter-active,
   .v-leave-active {
-    transition: opacity 1s ease;
+    transition: all 2s ease;
   }
 
   .v-enter-from,
