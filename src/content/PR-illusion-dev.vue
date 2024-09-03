@@ -56,7 +56,7 @@
         'By now you can probably see that this could essentially just be a parallel to a navigation or routing, and as such we can use exactly that.',
       ]"
     />
-    <CodeSnippet :content="titleScreenCode.html" />
+    <CodeSnippet :content="titleScreenCode.html" caption="A standard site navigation, repurposed as the main title selector"/>
     <Copy
       :paragraphs="[
         'One interesting thing to note here is that some of these routes would not exactly contain visual views, i.e: new-game / exit-game. For these we still need a destination template / view and as such I\'ve elected to use something I\'ve named as functional-views. ',
