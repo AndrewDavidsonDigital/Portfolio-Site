@@ -43,6 +43,7 @@
       :paragraphs="[
         'Games, like any current form of entertainment media, are just that, entertainment. Some might even argue they are a form of art, but thats neither here or now. The vast majority of games, wether they be from the SNES back in the 80-90\'s or todays multi-billion industry juggernauts, follow a similar flow. Usually the game boots up, displays some information, then lands the user on whats termed as a title screen. ',
         'Those splash information is similar to what movies do where they might have a `Warner Brothers` or `20th Century Fox` and any disclaimer that might need to be added i.e: this is work of fiction and any depictions to real life people is purely coincidence.',
+        'Replicating these is relatively simple as you are just fading in and out N instances of copy.',
       ]"
     />
     <Copy
@@ -52,10 +53,16 @@
         'Likewise: Exit Game should straight-up just do what it says, clean up any parallel threads and close down the game.',
         'Both Continue and Load Game should set the game-state to be a specific state that was recorded previously (in the case of continue, that\'d normally be the most recent save file). Once the state is loaded the game-loop would then be started and the scripting engine / manager would render the state from the one we have just loaded into memory.',
         'New Game, similar to Load and Continue, would set the game-sate before initiating the game-loop, but would have ensured that the game-state is reset instead of being set.',
-        'By now you can probably see that this would essentially just be a parallel to a navigation and as such we can use just that.',
+        'By now you can probably see that this could essentially just be a parallel to a navigation or routing, and as such we can use exactly that.',
       ]"
     />
     <CodeSnippet :content="titleScreenCode.html" />
+    <Copy
+      :paragraphs="[
+        'One interesting thing to note here is that some of these routes would not exactly contain visual views, i.e: new-game / exit-game. For these we still need a destination template / view and as such I\'ve elected to use something I\'ve named as functional-views. ',
+        'These act as intermediary views between the current view and the final destination. i.e: the `continue` needs to programmatically set the game state to the most recent save-state before then progressing to the actual `game` route.',
+      ]"
+    />
     <Copy
       :paragraphs="[
         'The actual playing of the game in itself would be down to the specific nature of what type of game is being programmed. For examples sake, and code-referencing, consider a `choose-your-own-adventure` book but in game form, this fundamentally what VNs (Visual Novels) are all about. As such you could consider the script-engine in this case as turning a page or reading a paragraph. In essence it is exactly that, synchronously load the current chapter, and then programmatically present to the user content one paragraph / interaction at a time. i.e: if you are presenting a conversation, each progression would be the sentence(s) provided by one speaker to the next.',
