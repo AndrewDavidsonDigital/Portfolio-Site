@@ -32,6 +32,8 @@
   }
 </style>
 <style scoped>
+/* Currently intermittent child opacity issues on safari */
+
   .v-enter-active,
   .v-leave-active {
     transition: all 0.5s ease-in-out;

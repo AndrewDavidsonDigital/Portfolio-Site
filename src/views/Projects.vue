@@ -46,6 +46,8 @@
 </template>
 
 <style scoped>
+/* Currently intermittent child opacity issues on safari */
+
   .v-enter-active,
   .v-leave-active {
     transition: all 2s ease;
