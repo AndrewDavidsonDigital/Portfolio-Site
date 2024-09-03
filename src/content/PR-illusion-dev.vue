@@ -6,7 +6,7 @@
     TimeToRead,
   } from '@components/index';
 
-  const titlescreenCode = {
+  const titleScreenCode = {
     html: '<template>\n\t<nav class="flex flex-col gap-5">\n\t\t<Clickable>\n\t\t\t<RouterLink to="/new-game" class="hover:text-orange-400">New Game</RouterLink>\n\t\t</Clickable>\n\t\t<Clickable>\n\t\t\t<RouterLink to="/continue" class="hover:text-orange-400">Continue</RouterLink>\n\t\t</Clickable>\n\t\t<Clickable>\n\t\t\t<RouterLink to="/load" class="hover:text-orange-400">Load Game</RouterLink>\n\t\t</Clickable>\n\t\t<Clickable>\n\t\t\t<RouterLink to="/options" class="hover:text-orange-400">Options</RouterLink>\n\t\t</Clickable>\n\t\t<Clickable>\n\t\t\t<RouterLink to="/exit" class="hover:text-orange-400">Exit</RouterLink>\n\t\t</Clickable>\n\t</nav>\n</template>',
   };
 
@@ -52,9 +52,10 @@
         'Likewise: Exit Game should straight-up just do what it says, clean up any parallel threads and close down the game.',
         'Both Continue and Load Game should set the game-state to be a specific state that was recorded previously (in the case of continue, that\'d normally be the most recent save file). Once the state is loaded the game-loop would then be started and the scripting engine / manager would render the state from the one we have just loaded into memory.',
         'New Game, similar to Load and Continue, would set the game-sate before initiating the game-loop, but would have ensured that the game-state is reset instead of being set.',
+        'By now you can probably see that this would essentially just be a parallel to a navigation and as such we can use just that.',
       ]"
     />
-    <CodeSnippet :content="titlescreenCode.html" />
+    <CodeSnippet :content="titleScreenCode.html" />
     <Copy
       :paragraphs="[
         'The actual playing of the game in itself would be down to the specific nature of what type of game is being programmed. For examples sake, and code-referencing, consider a `choose-your-own-adventure` book but in game form, this fundamentally what VNs (Visual Novels) are all about. As such you could consider the script-engine in this case as turning a page or reading a paragraph. In essence it is exactly that, synchronously load the current chapter, and then programmatically present to the user content one paragraph / interaction at a time. i.e: if you are presenting a conversation, each progression would be the sentence(s) provided by one speaker to the next.',
