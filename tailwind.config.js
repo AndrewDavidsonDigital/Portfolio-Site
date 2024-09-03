@@ -35,6 +35,9 @@ export default {
       height: {
         'screen': '100dvh', // overwrite from vh to dvh
       },
+      textWrap: {
+        'ballance': 'ballance',
+      },
       maxWidth: {
         '1920p': '1920px',
         'content': '1200px',
