@@ -34,7 +34,7 @@
       :tabs="tabs"
       @setActive="(key: string) => activeKey = key"
     >
-      <div class="grid-area-stack">
+      <div class="grid-area-stack w-full">
         <TransitionGroup>
           <PRIllusionDev v-show="activeKey === tabs[0].key" :key="`tab_${tabs[0].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[0].key}"/>
           <PRIllusionGamer v-show="activeKey === tabs[1].key" :key="`tab_${tabs[1].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[1].key}"/>

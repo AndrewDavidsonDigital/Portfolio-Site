@@ -9,7 +9,7 @@
 
 <template>
   <SpeedInsights />
-  <main id="scrollRoot" class="w-screen h-screen overflow-x-hidden bg-black scrollbar">
+  <main id="scrollRoot" class="h-screen overflow-x-hidden bg-black scrollbar">
     <Navigation />
       <RouterView class="w-full flex flex-col justify-center items-center" v-slot="{ Component, route }">
         <Transition mode="out-in">

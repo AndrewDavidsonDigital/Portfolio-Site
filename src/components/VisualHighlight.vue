@@ -30,7 +30,7 @@
 <template>
   <article 
     :class="[
-      'grid-area-stack md:aspect-16/9 overflow-hidden w-screen',
+      'grid-area-stack md:aspect-16/9 overflow-hidden w-full',
       props.isHero ? 'max-h-[65dvh]' : 'max-h-[85dvh]'
     ]">
     <video 
