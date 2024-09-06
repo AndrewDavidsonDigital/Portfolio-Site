@@ -14,7 +14,7 @@
     if (bouncing.value === true) {
       // console.log('bounced');
       return;
-    };
+    }
 
     setTimeout(
       () => {
@@ -43,7 +43,7 @@
       800,
     );
     // need to wait here since 
-  };
+  }
 
   function scaler(){
     reScale();

@@ -8,6 +8,8 @@
 
   const props = defineProps<Props>();
 
+  const instantiationDate = Date.now();
+
 </script>
 
 <template>
@@ -18,8 +20,10 @@
     ]"
   >
     <p v-if="props.paragraph">{{ props.paragraph }}</p>
-    <template v-if="props.paragraphs && props.paragraphs.length > 0" v-for="para in props.paragraphs" >
-      <p class="mb-2">{{ para }}</p>
+    <template v-if="props.paragraphs && props.paragraphs.length > 0">
+      <template v-for="(para, i) in props.paragraphs" :key="`copy_${i}__${instantiationDate}`">
+        <p class="mb-2">{{ para }}</p>
+      </template>
     </template>
   </section>
 </template>

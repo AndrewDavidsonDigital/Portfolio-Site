@@ -5,7 +5,7 @@ import router from '../router';
   export interface ITab {
     key: string;
     title: string;
-  };
+  }
   interface Props {
     tabs: ITab[];
   }

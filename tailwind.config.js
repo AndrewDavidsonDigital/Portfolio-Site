@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+// eslint-disable-next-line no-undef
+const plugin = require('tailwindcss/plugin');
 
 export default {
   content: [

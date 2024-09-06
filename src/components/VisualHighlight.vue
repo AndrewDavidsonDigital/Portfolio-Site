@@ -25,6 +25,8 @@
     leftAligned: false,
   });
 
+  const instantiationDate = Date.now();
+
 </script>
 
 <template>
@@ -44,8 +46,8 @@
     >
     </video>
     <img v-if="props.media.type === 'image'" :src="props.media.src" class="w-full object-center animate-fadeIn duration-150"/>
-    <template v-if="props.media.type === 'imageCollection'" class="grid-area-stack ">
-      <ItemCollection :media="props.media"/>
+    <template v-if="props.media.type === 'imageCollection'" >
+      <ItemCollection :media="props.media" class="grid-area-stack"/>
     </template>
     <div :class="[
       'bg-gradient-to-r to-65% z-10',
@@ -72,7 +74,7 @@
           {'justify-end' : !(props.leftAligned) },
         ]"
       >
-        <template v-for="tag in props.tags">
+        <template v-for="(tag, i) in props.tags" :key="`tag_${i}__${instantiationDate}`">
           <Tag :copy="tag" />
         </template>
       </section>
