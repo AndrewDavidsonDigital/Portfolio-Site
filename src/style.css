@@ -8,7 +8,11 @@
 }
 
 html{
-    font-size: clamp(16px,1vw,1vw);
+    /* 
+        Dynamic Font weighting range via viewport width
+        https://utopia.fyi/type/calculator/?c=320,16,1.125,1920,19,1.125,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+     */
+    font-size: clamp(1rem, 0.9625rem + 0.1875vw, 1.1875rem);
 }
 
 h1 {
