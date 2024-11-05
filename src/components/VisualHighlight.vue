@@ -50,11 +50,12 @@
       <ItemCollection :media="props.media" class="grid-area-stack"/>
     </template>
     <div :class="[
-      'bg-gradient-to-r to-65% z-10',
-      {'!bg-gradient-to-l' : props.leftAligned },
+      'bg-gradient-to-br md:bg-gradient-to-r to-65% from-20% z-10',
+      {'!bg-gradient-to-bl md:!bg-gradient-to-l' : props.leftAligned },
       {'from-red-400/20 to-red-400' : props.colour === 'red'},
       {'from-blue-400/20 to-blue-400' : props.colour === 'blue'},
       {'from-teal-400/20 to-teal-400' : props.colour === 'teal'},
+      {'!from-0%' : props.colour === 'teal'},
       ]"></div>
     <div :class="[ 
       'px-4 md:px-10 lg:px-20 py-5',
@@ -62,7 +63,7 @@
       'my-auto 2xl:mt-[10%]',
       'z-10',
       {'place-self-end text-end' : !(props.leftAligned) },
-      {'[&>*]:!text-slate-800' : props.colour === 'teal'},
+      {'[&>*]:!text-slate-900' : props.colour === 'teal'},
     ]">
       <h2>{{ props.title }}</h2>
       <h3 v-if="props.subTitle">{{ props.subTitle}}</h3>
