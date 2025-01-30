@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "boot": "yarn install && yarn dev --host",
     "dev": "vite --host",
     "build": "vite build",
     "build-local": "run type-check && run build-only",
