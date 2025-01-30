@@ -15,6 +15,7 @@ export default defineConfig({
       "@views": path.resolve(__dirname, "./src/views"),
       "@assets": path.resolve(__dirname, "./src/assets"),
       "@lib": path.resolve(__dirname, "./src/lib"),
+      "@router": path.resolve(__dirname, "./src/router"),
       // "@stores": path.resolve(__dirname, "./src/stores"),    
       // "&audio": path.resolve(__dirname, "./src/stores/audio"),      
     },

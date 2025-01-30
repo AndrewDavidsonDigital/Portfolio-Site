@@ -12,6 +12,7 @@
       "@components/*": ["./src/components/*"],
       "@content/*": ["./src/content/*"],
       "@lib/*": ["./src/lib/*"],
+      "@router/*": ["./src/router/*"],
     },
 
     /* Bundler mode */
