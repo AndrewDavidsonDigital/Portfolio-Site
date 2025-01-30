@@ -38,7 +38,9 @@
   // scene transition timer
   setTimeout(() => {
     router.push({name: 'landing'});
-  }, (500 + (interval * layers.value.length)));
+  }, 11000);
+  // magic number the timings here as it should be a function
+  // of of animations * durations but isn't mathing-out atm
 
 </script>
 
@@ -56,7 +58,7 @@
         ]"
     >
       <div class="max-w-[1000px] text-center *:text-lg *:text-gray-500">
-        <p>This product is brought to you by Indecies out of Bounds & Segmentation Faults</p>
+        <p>This site is brought to you by Indecies out of Bounds & Segmentation Faults</p>
       </div>
     </article>
     <article 
@@ -72,7 +74,7 @@
     >
       <div class="max-w-[1000px] text-center  *:text-lg *:text-gray-500">
         <p class="pb-2">WARNING: PHOTOSENSITIVITY/EPILEPSY SEIZURES</p>
-        <p>A very small percentage of people may experience epileptic seizures or blackouts when exposed to certain kinds of flashing lights or light patterns. These persons, or even people who have no history of seizures or epilepsy, may experience epileptic symptoms or seizures while playing video games. If you or any of your relatives has an epileptic condition or has had seizures of any kind, consult your physician before playing any video game.</p>
+        <p>A very small percentage of people may experience epileptic seizures or blackouts when exposed to certain kinds of flashing lights or light patterns. These persons, or even people who have no history of seizures or epilepsy, may experience epileptic symptoms or seizures while viewing certain websites. If you or any of your relatives has an epileptic condition or has had seizures of any kind, consult your physician before viewing this site.</p>
       </div>
     </article>
   </section>
