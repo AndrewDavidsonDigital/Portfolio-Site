@@ -137,6 +137,16 @@ export default {
         }
       }
       addUtilities(stackableGridArea);
+
+      const contentWrapper = {
+        '.content-wrapper' : {
+          maxWidth: '1400px',
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }
+      }
+      addUtilities(contentWrapper);
     }),
   ],
 

@@ -30,4 +30,13 @@ const router = createRouter({
   ]
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.fullPath === '' || to.fullPath === '/'){
+    document.getElementById('app')?.classList.remove('content-wrapper');
+  }else {
+    document.getElementById('app')?.classList.add('content-wrapper');
+  }
+  next();
+})
+
 export default router;
