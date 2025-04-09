@@ -38,8 +38,14 @@ import router from '../router';
 </script>
 
 <template>
-  <section v-if="props.tabs.length > 1" class="flex gap-4 p-2 sticky top-[2.5rem] w-full justify-center bg-black z-menu border-b-2 border-slate-900">
-    <template v-for="(tab, index) in props.tabs" :key="`tabIndex_${index}`">
+  <section
+    v-if="props.tabs.length > 1"
+    class="flex gap-4 p-2 sticky top-[2.5rem] w-full justify-center bg-black z-menu border-b-2 border-slate-900"
+  >
+    <template
+      v-for="(tab, index) in props.tabs"
+      :key="`tabIndex_${index}`"
+    >
       <button
         :class="[
           'transition-colors duration-300',
@@ -47,8 +53,10 @@ import router from '../router';
           { '' : index === -1} // BS check here since TSC complains about index not being used but is used in key on own template
         ]"
         @click="setActive(tab.key)"
-      >{{ tab.title }}</button>
+      >
+        {{ tab.title }}
+      </button>
     </template>
   </section>
-  <slot></slot>
+  <slot />
 </template>

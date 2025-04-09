@@ -8,7 +8,7 @@
   <section class="bg-black text-white">
     <VisualHighlight 
       title="Internal Warehouse & Order Management System"
-      subTitle="Past Work"
+      sub-title="Past Work"
       copy="Developing, Supporting and Leading the development team on rolling out order-management flow and document integration bi-directional into Xero."
       :media="{
         src: ['/image/delivery_1.webp', '/image/delivery_2.webp'], 
@@ -22,8 +22,8 @@
         'CRM',
       ]"
       colour="blue"
-      leftAligned
-      :hashLink="{
+      left-aligned
+      :hash-link="{
         title: 'More details about the complexities of maintaining a singular service that would traditionally be 3 distinct services',
         link: {
           path: '/pastworks',
@@ -33,7 +33,7 @@
     />
     <VisualHighlight 
       title="Visual Novel Game Engine"
-      subTitle="Personal Project"
+      sub-title="Personal Project"
       copy="As an avid gamer it's always interesting to see what I can replicate from various game elements, this is a POC to showcase both how much much is replicable and to what extent." 
       :media="{
         src: '/video/bg-menu.mp4', 
@@ -46,7 +46,7 @@
         'Gaming',
       ]"
       colour="red"
-      :hashLink="{
+      :hash-link="{
         title: 'Read about some of the obscure issues that I encountered.',
         link: {
           path: '/projects',
@@ -56,7 +56,7 @@
     />
     <VisualHighlight 
       title="Marketing Websites - Holden"
-      subTitle="Past Work"
+      sub-title="Past Work"
       copy="Development and support of Back End APIs for supporting both the Front End and ensuring CI/CD flows correctly."
       :media="{
         src: ['/image/marketing_1_0.jpeg', '/image/marketing_1_1.jpeg'], 
@@ -72,8 +72,8 @@
         'SOAP',
       ]"
       colour="blue"
-      leftAligned
-      :hashLink="{
+      left-aligned
+      :hash-link="{
         title: 'How did I achieve ~70% reduction on CICD build time',
         link: {
           path: '/pastworks',
@@ -83,7 +83,7 @@
     />
     <VisualHighlight 
       title="Marketing Websites - Vocus"
-      subTitle="Past Work"
+      sub-title="Past Work"
       copy="Development and rollout of Atomic Design, from CMS authoring down to React rendering and deployment." 
       :media="{
         src: ['/image/marketing_2_0.webp', '/image/marketing_2_1.webp'], 
@@ -98,7 +98,7 @@
         'GraphQL',
       ]"
       colour="red"
-      :hashLink="{
+      :hash-link="{
         title: 'Read more on our solutions',
         link: {
           path: '/pastworks',

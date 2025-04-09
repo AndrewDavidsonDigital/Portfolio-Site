@@ -15,9 +15,9 @@
 <template>
   <section class="flex flex-col gap-y-2">
     <VisualHighlight
-      isHero
+      is-hero
       title="Visual Novel Game Engine"
-      subTitle="Personal Project"
+      sub-title="Personal Project"
       copy="As an avid gamer it's always interesting to see what I can replicate from various game elements, this is a POC to showcase both how much much is replicable and to what extent." 
       :media="{
         src: '/video/bg-menu.mp4', 
@@ -30,9 +30,9 @@
         'Gaming',
       ]"
       colour="red"
-      leftAligned
+      left-aligned
     />
-    <TimeToRead/>
+    <TimeToRead />
     <Copy
       :paragraphs="[
         'Lets just get this out in the open straight away, under NO circumstances would I recommend building a game engine in JavaScript let alone a framework on top of it. This is purely an instance of curiosity to see to what extent replication could be possible within modern(circa 2024) JavaScript.',
@@ -56,7 +56,10 @@
         'By now you can probably see that this could essentially just be a parallel to a navigation or routing, and as such we can use exactly that.',
       ]"
     />
-    <CodeSnippet :content="titleScreenCode.html" caption="A standard site navigation, repurposed as the main title selector"/>
+    <CodeSnippet
+      :content="titleScreenCode.html"
+      caption="A standard site navigation, repurposed as the main title selector"
+    />
     <Copy
       :paragraphs="[
         'One interesting thing to note here is that some of these routes would not exactly contain visual views, i.e: new-game / exit-game. For these we still need a destination template / view and as such I\'ve elected to use something I\'ve named as functional-views. ',
@@ -70,6 +73,9 @@
       ]"
     />
     <Copy paragraph="Visual Novels are a bit of an oddity in the gaming industry as they are less of an active game and more just of an experience, similar to audio books, they bridge a gap / niche between reading and gaming." />
-    <span class="text-center"><Copy paragraph="Full code is visible under the `IllusionEngine` repo" disableFirstChar/></span>
+    <span class="text-center"><Copy
+      paragraph="Full code is visible under the `IllusionEngine` repo"
+      disable-first-char
+    /></span>
   </section>
 </template>

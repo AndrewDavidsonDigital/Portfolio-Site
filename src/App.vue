@@ -9,11 +9,20 @@
 
 <template>
   <SpeedInsights />
-  <main id="scrollRoot" class="h-screen overflow-x-hidden bg-black scrollbar">
+  <main
+    id="scrollRoot"
+    class="h-screen overflow-x-hidden bg-black scrollbar"
+  >
     <Navigation />
-    <RouterView class="w-full flex flex-col justify-center items-center" v-slot="{ Component, route }">
+    <RouterView
+      v-slot="{ Component, route }"
+      class="w-full flex flex-col justify-center items-center"
+    >
       <Transition mode="out-in">
-        <component :is="Component" :key="route.path"/>
+        <component
+          :is="Component"
+          :key="route.path"
+        />
       </Transition>
     </RouterView>
     <FooterElement />

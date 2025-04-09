@@ -13,14 +13,16 @@ import router from '@router/index';
       {'!opacity-0 delay-[0s] duration-[100ms]' : router.currentRoute.value.path === '/'}
     ]"
   >
-    <div>© {{ (new Date()).getFullYear()  }}</div>
-    <div>Contact: 
+    <div>© {{ (new Date()).getFullYear() }}</div>
+    <div>
+      Contact: 
       <a 
         href="mailto:andrew.davidson.digital@gmail.com" 
         class="transition-colors duration-300 hover:text-orange-300 hover:underline underline-offset-4"
       >andrew.davidson.digital@gmail.com</a>
     </div>
-    <div>GitHub:
+    <div>
+      GitHub:
       <a 
         href="https://github.com/AndrewDavidsonDigital" 
         class="transition-colors duration-300 hover:text-orange-300 hover:underline underline-offset-4"

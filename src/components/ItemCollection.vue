@@ -14,12 +14,16 @@
 
 <template>
   <div class="grid-area-stack animation-chain-staggered">
-    <template v-for="(src, index) in props.media.src" :key="`img_${index}`">
+    <template
+      v-for="(src, index) in props.media.src"
+      :key="`img_${index}`"
+    >
       <img
         class="object-contain animate-fadeInOut self-center w-full opacity-0 mask"
         :src="src"
         :data-index="index"
-      />
+        alt=""
+      >
     </template>
   </div>
 </template>

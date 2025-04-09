@@ -52,13 +52,13 @@
         'flex flex-col justify-around items-center',
         'h-full opacity-0',
         { 'animate-fadeIn' : layers[0].state === 'in' },
-        { 'opacity-100'    : layers[0].state === 'static' },
+        { 'opacity-100' : layers[0].state === 'static' },
         { 'animate-fadeOut': layers[0].state === 'out' },
-        { 'opacity-0'      : layers[0].state === 'off' },
-        ]"
+        { 'opacity-0' : layers[0].state === 'off' },
+      ]"
     >
       <div class="max-w-[1000px] text-center *:text-lg *:text-gray-500">
-        <p>This site is brought to you by Indecies out of Bounds & Segmentation Faults</p>
+        <p>This site is brought to you by Indices out of Bounds & Segmentation Faults</p>
       </div>
     </article>
     <article 
@@ -67,13 +67,15 @@
         'flex flex-col justify-around items-center',
         'h-full opacity-0',
         { 'animate-fadeIn' : layers[1].state === 'in' },
-        { 'opacity-100'    : layers[1].state === 'static' },
+        { 'opacity-100' : layers[1].state === 'static' },
         { 'animate-fadeOut': layers[1].state === 'out' },
-        { 'opacity-0'      : layers[1].state === 'off' },
-        ]"
+        { 'opacity-0' : layers[1].state === 'off' },
+      ]"
     >
       <div class="max-w-[1000px] text-center  *:text-lg *:text-gray-500">
-        <p class="pb-2">WARNING: PHOTOSENSITIVITY/EPILEPSY SEIZURES</p>
+        <p class="pb-2">
+          WARNING: PHOTOSENSITIVITY/EPILEPSY SEIZURES
+        </p>
         <p>A very small percentage of people may experience epileptic seizures or blackouts when exposed to certain kinds of flashing lights or light patterns. These persons, or even people who have no history of seizures or epilepsy, may experience epileptic symptoms or seizures while viewing certain websites. If you or any of your relatives has an epileptic condition or has had seizures of any kind, consult your physician before viewing this site.</p>
       </div>
     </article>

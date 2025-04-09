@@ -19,10 +19,17 @@
       { 'firstParaChar' : !(props.disableFirstChar) }
     ]"
   >
-    <p v-if="props.paragraph">{{ props.paragraph }}</p>
+    <p v-if="props.paragraph">
+      {{ props.paragraph }}
+    </p>
     <template v-if="props.paragraphs && props.paragraphs.length > 0">
-      <template v-for="(para, i) in props.paragraphs" :key="`copy_${i}__${instantiationDate}`">
-        <p class="mb-2">{{ para }}</p>
+      <template
+        v-for="(para, i) in props.paragraphs"
+        :key="`copy_${i}__${instantiationDate}`"
+      >
+        <p class="mb-2">
+          {{ para }}
+        </p>
       </template>
     </template>
   </section>

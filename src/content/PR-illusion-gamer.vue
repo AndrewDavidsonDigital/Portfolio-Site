@@ -27,9 +27,9 @@
 <template>
   <section class="flex flex-col gap-y-2">
     <VisualHighlight
-      isHero
+      is-hero
       title="Visual Novel Game Engine"
-      subTitle="Personal Project"
+      sub-title="Personal Project"
       copy="As an avid gamer it's always interesting to see what I can replicate from various game elements, this is a POC to showcase both how much much is replicable and to what extent." 
       :media="{
         src: '/video/bg-menu.mp4', 
@@ -43,7 +43,7 @@
       ]"
       colour="red"
     />
-    <TimeToRead/>
+    <TimeToRead />
     <Copy
       :paragraphs="[
         'Lets just get this out in the open straight away, under NO circumstances would I recommend building a game engine in JavaScript let alone a framework on top of it. This is purely an instance of curiosity to see to what extent replication could be possible within modern(circa 2024) JavaScript.',
@@ -57,18 +57,34 @@
         'Additionally we would need to implement custom hooks for understanding if what our cursor is on is clickable.',
       ]"
     />
-    <CodeSnippet :content="customPointer.js" caption="Initiation of the required hooks for moving the custom cursor and for animating any `click` interactions "/>
-    <CodeSnippet :content="customPointer.storeJs" caption="Wrapper component needed to support understanding that an element (the slot) should be considered hover-able"/>
+    <CodeSnippet
+      :content="customPointer.js"
+      caption="Initiation of the required hooks for moving the custom cursor and for animating any `click` interactions "
+    />
+    <CodeSnippet
+      :content="customPointer.storeJs"
+      caption="Wrapper component needed to support understanding that an element (the slot) should be considered hover-able"
+    />
     <Copy paragraph="We'd also need to program the specific effects that we desire, in this case custom styling and animations for both hovering on clickable entities and the click action itself." />
-    <CodeSnippet :content="customPointer.html" caption="Custom animations for base state and hover"/>
+    <CodeSnippet
+      :content="customPointer.html"
+      caption="Custom animations for base state and hover"
+    />
     <Copy
       :paragraphs="[
         'One core difference between other media and games is that games allow for choice, and one thing this leads to is an ever-branching path of ways the game can be completed. What this means is that you cant just have 1 static audio track that encompasses all track types. As such we would need a collection of audio engines to be running at the same time. i.e: to support a sound effect going off while the background music is still playing.',
         'This was surprisingly easy we can state manage n top-level html audio elements, each responsible for different tracks and just pass tracks to them to start playing. This allows us to manipulate all aspects independent of each other, such as volume.',
       ]"
     />
-    <CodeSnippet :content="audioEngine.html" caption="The different audio track elements instantiated html state"/>
-    <CodeSnippet :content="audioEngine.js" language="javascript" caption="The instantiation and loading of the users audio game settings"/>
+    <CodeSnippet
+      :content="audioEngine.html"
+      caption="The different audio track elements instantiated html state"
+    />
+    <CodeSnippet
+      :content="audioEngine.js"
+      language="javascript"
+      caption="The instantiation and loading of the users audio game settings"
+    />
     <Copy
       :paragraphs="[
         'For a Visual Novel type game, the entire game-state can be considered just that a singular state. As such we can use a singular overarching state-machine for the game state, and act reactively triggering events when the states progress. This allows for a singular source of truth about where the game is at, and a singular entry for enacting the actual changes requested by the game engine.',
@@ -76,8 +92,14 @@
         'Any of these effects would be caught a change in the scene updating the store\'s `effect` value to something like `wounded` and thus enabling that effect. Likewise the volcano example would set the stores `effect` to say `screenShake_small` AND the stores `interactionSound` to the asset path for playing the desired sound effect.',
       ]"
     />
-    <CodeSnippet :content="scriptingEngine.html" caption="A truncated version of the ScenePlayer stack, highlighting the different layers"/>
-    <Copy paragraph="There are multitudes more interesting aspects of this codebase, including the issues of the overlay component needing to interact to some of its sibling components only under certain confines, but those are all discussion points for another time."/>
-    <span class="text-center"><Copy paragraph="Full code is visible under the `IllusionEngine` repo" disableFirstChar/></span>
+    <CodeSnippet
+      :content="scriptingEngine.html"
+      caption="A truncated version of the ScenePlayer stack, highlighting the different layers"
+    />
+    <Copy paragraph="There are multitudes more interesting aspects of this codebase, including the issues of the overlay component needing to interact to some of its sibling components only under certain confines, but those are all discussion points for another time." />
+    <span class="text-center"><Copy
+      paragraph="Full code is visible under the `IllusionEngine` repo"
+      disable-first-char
+    /></span>
   </section>
 </template>

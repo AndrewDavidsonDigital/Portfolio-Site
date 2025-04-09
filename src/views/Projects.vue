@@ -32,13 +32,25 @@
   <section class="bg-black text-white min-h-[100%] !justify-start">
     <Tabset 
       :tabs="tabs"
-      @setActive="(key: string) => activeKey = key"
+      @set-active="(key: string) => activeKey = key"
     >
       <div class="grid-area-stack w-full">
         <TransitionGroup>
-          <PRIllusionDev v-show="activeKey === tabs[0].key" :key="`tab_${tabs[0].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[0].key}"/>
-          <PRIllusionGamer v-show="activeKey === tabs[1].key" :key="`tab_${tabs[1].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[1].key}"/>
-          <PRConsiderations v-show="activeKey === tabs[2].key" :key="`tab_${tabs[2].key}_${mountedTime}`" :class="{ 'opacity-0' : activeKey !== tabs[2].key}"/>
+          <PRIllusionDev
+            v-show="activeKey === tabs[0].key"
+            :key="`tab_${tabs[0].key}_${mountedTime}`"
+            :class="{ 'opacity-0' : activeKey !== tabs[0].key}"
+          />
+          <PRIllusionGamer
+            v-show="activeKey === tabs[1].key"
+            :key="`tab_${tabs[1].key}_${mountedTime}`"
+            :class="{ 'opacity-0' : activeKey !== tabs[1].key}"
+          />
+          <PRConsiderations
+            v-show="activeKey === tabs[2].key"
+            :key="`tab_${tabs[2].key}_${mountedTime}`"
+            :class="{ 'opacity-0' : activeKey !== tabs[2].key}"
+          />
         </TransitionGroup>
       </div>
     </Tabset>

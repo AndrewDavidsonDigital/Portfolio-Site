@@ -8,7 +8,8 @@
 </script>
 
 <template>
-  <RouterLink t
+  <RouterLink
+    t
     :to="props.to" 
     class="
       self-center 
@@ -16,5 +17,7 @@
       hover:[&>svg]:stroke-orange-400 [&>svg]:transition-all [&>svg]:duration-300 
     "
     active-class="text-orange-400 [&>svg]:stroke-orange-400 opacity-80 [&>svg]:opacity-80 underline underline-offset-4 pointer-events-none"
-  ><slot></slot></RouterLink>
+  >
+    <slot />
+  </RouterLink>
 </template>

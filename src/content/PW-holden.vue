@@ -10,9 +10,9 @@
 <template>
   <section class="flex flex-col gap-y-2 mb-4">
     <VisualHighlight
-      isHero
+      is-hero
       title="Marketing Websites - Holden"
-      subTitle="Past Work"
+      sub-title="Past Work"
       copy="Development and support of Back End APIs for supporting both the Front End and ensuring CI/CD flows correctly."
       :media="{
         src: ['/image/marketing_1_0.jpeg', '/image/marketing_1_1.jpeg'], 
@@ -28,9 +28,9 @@
         'SOAP',
       ]"
       colour="red"
-      leftAligned
+      left-aligned
     />
-    <TimeToRead/>
+    <TimeToRead />
     <Copy paragraph="Now I know what your thinking, What the actual F, how can a CI/CD process be so cooked that a ~70% improvement is even possible. Well its actually really simple, step 1 enterprise restrictions, step 2 implementation creep/bloat and tech-debt. Over my tenure working on the Holden website I eventual ended up supporting the devops team with the specific requirements of our website solution." />
     <Copy paragraph="To set the stage, the front end CI was previously on a self-hosted Jenkins instance, and through the wisdom of centralizing resources was migrated to run using a teamcity instance, shared throughout the company. The only issue here is that this was a bring-your-own image and was to be shared with teams that have a wildly different tech stack, and this being the relatively earlier days of npm, `n` or `nvm` weren't widely available solutions at the time." />
     <Copy 

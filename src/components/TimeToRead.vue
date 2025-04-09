@@ -23,5 +23,7 @@
 <template>
   <p 
     class="py-2 w-full max-w-content 3xl:max-w-lg-content 4xl:max-w-xl-content mx-auto px-4 md:px-10 text-slate-300 italic"
-  ><span ref="timeElement"></span> min read</p>
+  >
+    <span ref="timeElement" /> min read
+  </p>
 </template>
