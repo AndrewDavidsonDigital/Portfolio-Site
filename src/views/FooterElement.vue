@@ -18,14 +18,14 @@ import router from '@router/index';
       Contact: 
       <a 
         href="mailto:andrew.davidson.digital@gmail.com" 
-        class="transition-colors duration-300 hover:text-orange-300 hover:underline underline-offset-4"
+        class="transition-all duration-300 hover:text-orange-300 underline underline-offset-4 decoration-transparent hover:decoration-orange-300"
       >andrew.davidson.digital@gmail.com</a>
     </div>
     <div>
       GitHub:
       <a 
         href="https://github.com/AndrewDavidsonDigital" 
-        class="transition-colors duration-300 hover:text-orange-300 hover:underline underline-offset-4"
+        class="transition-all duration-300 hover:text-orange-300 underline underline-offset-4 decoration-transparent hover:decoration-orange-300"
         target="_blank"
       >github.com/AndrewDavidsonDigital</a>
     </div>

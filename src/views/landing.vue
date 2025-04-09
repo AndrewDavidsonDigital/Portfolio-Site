@@ -99,7 +99,7 @@
       ]"
       colour="red"
       :hash-link="{
-        title: 'Read more on our solutions',
+        title: 'Read more on the solution',
         link: {
           path: '/pastworks',
           hash: '#vocus',
