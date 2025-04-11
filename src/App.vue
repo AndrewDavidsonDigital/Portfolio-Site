@@ -12,6 +12,7 @@
   <main
     id="scrollRoot"
     class="h-screen overflow-x-hidden bg-black scrollbar"
+    tabindex="-1"
   >
     <Navigation />
     <RouterView

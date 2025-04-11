@@ -47,12 +47,19 @@
       loop
       playsinline
       :src="props.media.src"
+      tabindex="-1"
+      role="presentation"
+      aria-label="Background Media"
+      alt="Background Media"
     />
     <img
       v-if="props.media.type === 'image'"
       :src="props.media.src"
       class="w-full object-center animate-fadeIn duration-150"
-      alt=""
+      tabindex="-1"
+      role="presentation"
+      aria-label="Background Media"
+      alt="Background Media"
     >
     <template v-if="props.media.type === 'imageCollection'">
       <ItemCollection
@@ -66,8 +73,7 @@
         {'!bg-gradient-to-bl md:!bg-gradient-to-l' : props.leftAligned },
         {'from-red-400/20 to-red-400' : props.colour === 'red'},
         {'from-blue-400/20 to-blue-400' : props.colour === 'blue'},
-        {'from-teal-400/20 to-teal-400' : props.colour === 'teal'},
-        {'!from-0%' : props.colour === 'teal'},
+        {'!from-0% from-teal-400/20 to-teal-400' : props.colour === 'teal'},
       ]"
     />
     <div
@@ -76,8 +82,8 @@
         'max-w-[50rem]',
         'my-auto 2xl:mt-[10%]',
         'z-10',
+        '[&>*]:text-slate-900 [&>h3]:text-neutral-700',
         {'place-self-end text-end' : !(props.leftAligned) },
-        {'[&>*]:!text-slate-900' : props.colour === 'teal'},
       ]"
     >
       <h2>{{ props.title }}</h2>
@@ -105,7 +111,7 @@
       >
         <RouterLink
           :to="props.hashLink.link"
-          class="italic text-slate-800 hover:text-inherit transition-colors duration-300"
+          class="italic text-slate-700 hover:text-inherit transition-colors duration-300"
         >
           {{ props.hashLink.title }}
         </RouterLink> 

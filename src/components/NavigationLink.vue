@@ -9,14 +9,13 @@
 
 <template>
   <RouterLink
-    t
     :to="props.to" 
     class="
       self-center 
-      hover:text-orange-400 transition-all duration-300
-      hover:[&>svg]:stroke-orange-400 [&>svg]:transition-all [&>svg]:duration-300 
+      hover:text-orange-300 transition-all duration-300
+      hover:[&>svg]:stroke-orange-300 [&>svg]:transition-all [&>svg]:duration-300 
     "
-    active-class="text-orange-400 [&>svg]:stroke-orange-400 opacity-80 [&>svg]:opacity-80 underline underline-offset-4 pointer-events-none"
+    active-class="text-orange-300 [&>svg]:stroke-orange-300 opacity-80 [&>svg]:opacity-80 underline underline-offset-4 pointer-events-none"
   >
     <slot />
   </RouterLink>

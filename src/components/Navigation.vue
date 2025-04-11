@@ -19,7 +19,7 @@
   >
     <div class="flex">
       <NavigationLink to="/landing">
-        <HomeIcon />
+        <HomeIcon aria-label="Return to Landing" />
       </NavigationLink>
     </div>
     <div class="flex justify-end gap-x-6">
