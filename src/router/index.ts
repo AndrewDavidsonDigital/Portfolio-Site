@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Init from '@views/Init.vue';
-import Landing from '@views/landing.vue';
 import PastWorks from '@views/PastWorks.vue';
 import Projects from '@views/Projects.vue';
 
@@ -9,13 +8,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'init',
+      name: 'home',
       component: Init,
-    },
-    {
-      path: '/landing',
-      name: 'landing',
-      component: Landing,
     },
     {
       path: '/projects',
@@ -30,13 +24,5 @@ const router = createRouter({
   ]
 });
 
-router.beforeEach((to, from, next) => {
-  if (to.fullPath === '' || to.fullPath === '/'){
-    document.getElementById('app')?.classList.remove('content-wrapper');
-  }else {
-    document.getElementById('app')?.classList.add('content-wrapper');
-  }
-  next();
-})
 
 export default router;

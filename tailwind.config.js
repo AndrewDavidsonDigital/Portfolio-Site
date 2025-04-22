@@ -140,7 +140,7 @@ export default {
 
       const contentWrapper = {
         '.content-wrapper' : {
-          maxWidth: '1400px',
+          maxWidth: '1200px',
           width: '100%',
           marginLeft: 'auto',
           marginRight: 'auto',

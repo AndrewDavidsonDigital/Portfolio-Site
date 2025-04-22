@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 *{
-    @apply text-white;
     @apply font-semibold;
+    --spacing: 0.25rem /* 4px */;
+    @apply text-white;
 }
 
 html{
@@ -41,3 +42,8 @@ button:disabled{
 /* ::selection{
     @apply text-inherit;
 } */
+
+.text-trim{
+    text-box-trim: trim-both;
+    text-box-edge: ex alphabetic;
+}

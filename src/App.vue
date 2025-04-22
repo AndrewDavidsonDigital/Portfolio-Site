@@ -11,22 +11,24 @@
   <SpeedInsights />
   <main
     id="scrollRoot"
-    class="h-screen overflow-x-hidden bg-black scrollbar"
+    class="h-screen overflow-x-hidden scrollbar"
     tabindex="-1"
   >
-    <Navigation />
-    <RouterView
-      v-slot="{ Component, route }"
-      class="w-full flex flex-col justify-center items-center"
-    >
-      <Transition mode="out-in">
-        <component
-          :is="Component"
-          :key="route.path"
-        />
-      </Transition>
-    </RouterView>
-    <FooterElement />
+    <section class="max-w-content mx-auto">
+      <Navigation />
+      <RouterView
+        v-slot="{ Component, route }"
+        class="w-full flex flex-col justify-center items-center"
+      >
+        <Transition mode="out-in">
+          <component
+            :is="Component"
+            :key="route.path"
+          />
+        </Transition>
+      </RouterView>
+      <FooterElement />
+    </section>
   </main>
 </template>
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
   import Tag from '@components/Tag.vue';
+  import Link from '@components/Link.vue';
   import ItemCollection from '@components/ItemCollection.vue';
   import { RouteLocationRaw } from 'vue-router';
 
-  type Colours = 'red' | 'blue' | 'teal';
+  export type Colours = 'red' | 'blue' | 'teal';
   type Media = { src: string, type: 'video' | 'image' } | { src: string[], type: 'imageCollection' } 
 
   interface Props {
@@ -35,7 +36,7 @@
 <template>
   <article 
     :class="[
-      'grid-area-stack md:aspect-16/9 overflow-hidden w-full',
+      'grid-area-stack md:aspect-16/9 overflow-hidden w-full group',
       props.isHero ? 'max-h-[65dvh]' : 'max-h-[85dvh]'
     ]"
   >
@@ -71,8 +72,8 @@
       :class="[
         'bg-gradient-to-br md:bg-gradient-to-r to-65% from-20% z-10',
         {'!bg-gradient-to-bl md:!bg-gradient-to-l' : props.leftAligned },
-        {'from-red-400/20 to-red-400' : props.colour === 'red'},
-        {'from-blue-400/20 to-blue-400' : props.colour === 'blue'},
+        {'from-red-400/50 md:from-red-400/20 !to-red-400' : props.colour === 'red'},
+        {'from-blue-400/50 md:from-blue-400/20 !to-blue-400' : props.colour === 'blue'},
         {'!from-0% from-teal-400/20 to-teal-400' : props.colour === 'teal'},
       ]"
     />
@@ -105,17 +106,15 @@
           <Tag :copy="tag" />
         </template>
       </section>
-      <section
+      <Link
         v-if="props.hashLink"
-        class="pt-2"
-      >
-        <RouterLink
-          :to="props.hashLink.link"
-          class="italic text-slate-700 hover:text-inherit transition-colors duration-300"
-        >
-          {{ props.hashLink.title }}
-        </RouterLink> 
-      </section>
+        :link="props.hashLink.link"
+        :title="props.hashLink.title"
+        :colour="props.colour"
+        :class="[
+          {'place-self-end text-end' : !(props.leftAligned) },
+        ]"
+      />
     </div>
   </article>
 </template>

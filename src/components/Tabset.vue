@@ -40,7 +40,7 @@ import router from '../router';
 <template>
   <section
     v-if="props.tabs.length > 1"
-    class="flex gap-4 p-2 sticky top-[2.5rem] w-full justify-center bg-black z-menu border-b-2 border-slate-900"
+    class="flex gap-4 p-2 sticky top-[2.5rem] w-full justify-center bg-black z-menu border-2 border-t-0 border-slate-900"
   >
     <template
       v-for="(tab, index) in props.tabs"

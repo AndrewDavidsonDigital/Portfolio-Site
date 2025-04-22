@@ -15,10 +15,11 @@
       'bg-slate-600 glass-sm ',
       'top-0 sticky flex justify-between',
       'z-menu',
+      'max-w-content mx-auto',
     ]"
   >
     <div class="flex">
-      <NavigationLink to="/landing">
+      <NavigationLink to="/">
         <HomeIcon aria-label="Return to Landing" />
       </NavigationLink>
     </div>
