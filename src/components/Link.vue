@@ -58,13 +58,12 @@
       `--color-snake-head:${resolveColour(props.colour)}`,
     ]"
     @click="() => innerClick()"
-    @keydown="() => innerClick()"
-    @keyup="() => innerClick()"
   >
     <RouterLink
       :id="linkId"
       :to="props.link"
       class="italic transition-colors duration-300 text-trim"
+      tabindex="-1"
     >
       {{ props.title }}
     </RouterLink> 
