@@ -41,7 +41,6 @@ export default {
       },
       maxWidth: {
         '1920p': '1920px',
-        'content': '1200px',
         'lg-content': '1600px',
         'xl-content': '60rem',
       },

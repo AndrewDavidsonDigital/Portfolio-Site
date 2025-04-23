@@ -34,7 +34,7 @@
       :tabs="tabs"
       @set-active="(key: string) => activeKey = key"
     >
-      <div class="grid-area-stack w-full">
+      <div class="grid-area-stack w-full md:border-x border-slate-800">
         <TransitionGroup>
           <PRIllusionDev
             v-show="activeKey === tabs[0].key"
