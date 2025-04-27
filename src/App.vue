@@ -14,7 +14,28 @@
     class="h-screen overflow-x-hidden scrollbar"
     tabindex="-1"
   >
-    <section class="max-w-content mx-auto bg-black">
+    <section 
+      class="
+        relative
+        max-w-content mx-auto bg-black
+
+        before:hidden before:xl:block
+        before:absolute before:z-max 
+        before:h-full before:w-20 
+        before:-left-12 before:top-0
+        before:bg-gradient-to-r before:via-60%
+        before:from-transparent before:via-neutral-950 before:to-transparent
+
+        after:hidden after:xl:block
+        after:absolute after:z-max 
+        after:h-full after:w-20 
+        after:-right-12 after:top-0
+        after:bg-gradient-to-l after:via-60%
+        after:from-transparent after:via-neutral-950 after:to-transparent
+
+
+      "
+    >
       <Navigation />
       <RouterView
         v-slot="{ Component, route }"

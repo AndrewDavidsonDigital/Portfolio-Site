@@ -16,9 +16,10 @@
       'top-0 sticky flex justify-between',
       'z-menu',
       'max-w-content mx-auto',
+      'xl:px-10'
     ]"
   >
-    <div class="flex">
+    <div class="flex z-max">
       <NavigationLink to="/">
         <HomeIcon aria-label="Return to Landing" />
       </NavigationLink>
