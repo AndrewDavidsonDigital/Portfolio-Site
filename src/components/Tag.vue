@@ -1,10 +1,9 @@
 <script setup lang="ts">
-interface Props {
-  copy: string;
-}
+  interface Props {
+    copy: string;
+  }
 
-const props = defineProps<Props>();
-
+  const props = defineProps<Props>();
 </script>
 
 <template>
@@ -16,9 +15,17 @@ const props = defineProps<Props>();
       rounded-xl  
       glass-sm 
       text-sm text-center
-      
+      moz-text-center
     "
   >
     {{ props.copy }}
   </div>
 </template>
+
+<style lang="css" scoped>
+  @supports (-moz-appearance:none) {
+    .moz-text-center {
+      @apply pb-0.5;
+    }
+  }
+</style>

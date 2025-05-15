@@ -91,7 +91,7 @@
       <h3 v-if="props.subTitle">
         {{ props.subTitle }}
       </h3>
-      <p>{{ props.copy }}</p>
+      <p class="text-balance">{{ props.copy }}</p>
       <section 
         v-if="props.tags.length > 0" 
         :class="[
