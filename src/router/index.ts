@@ -3,6 +3,15 @@ import Init from '@views/Init.vue';
 import PastWorks from '@views/PastWorks.vue';
 import Projects from '@views/Projects.vue';
 
+const redirects = [  
+  {
+    path: '/landing',
+    redirect: {
+      name: 'home',
+    }
+  },
+]
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -21,6 +30,7 @@ const router = createRouter({
       name: 'pastworks',
       component: PastWorks,
     },
+    ...redirects,
   ]
 });
 
