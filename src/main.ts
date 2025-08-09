@@ -18,3 +18,5 @@ app.use(router)
 app.use(hljsVuePlugin)
 
 app.mount('#app');
+
+document.body.dataset['mounted'] = "";
