@@ -49,8 +49,7 @@
       playsinline
       :src="props.media.src"
       tabindex="-1"
-      role="presentation"
-      aria-label="Background Media"
+      aria-hidden
       alt="Background Media"
     />
     <img
@@ -58,8 +57,7 @@
       :src="props.media.src"
       class="w-full object-center animate-fadeIn duration-150"
       tabindex="-1"
-      role="presentation"
-      aria-label="Background Media"
+      aria-hidden
       alt="Background Media"
     >
     <template v-if="props.media.type === 'imageCollection'">

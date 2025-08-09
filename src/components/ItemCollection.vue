@@ -23,6 +23,7 @@
         :src="src"
         :data-index="index"
         alt=""
+        aria-hidden
       >
     </template>
   </div>
