@@ -12,31 +12,28 @@
       }
       body[data-mounted] .preview {
         opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        transform: translateX(-50vw);
+        transition: opacity 0.5s linear, transform 0.4s linear;
         pointer-events: none;
-      }
-      body[data-mounted] .preview {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
       }
       body:not([data-mounted]) {
         min-height: 90dvh;
         display: grid;
         justify-content: center;
         align-content: center;
+        overflow: clip;
       }
       .preview{
+        position: absolute;
+        top: 49%;
+        left: 49%;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
         width: fit-content;
         font-size: x-large;
         font-family: 'Courier New', Courier, monospace;
         opacity: 1;
-        transform: translateY(0);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
       }
       @keyframes loading-dot {
         0%, 80%, 100% {
